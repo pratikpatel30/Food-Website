@@ -121,3 +121,140 @@ body{
     text-transform: uppercase;
 }
 
+/* ############## About Us Styling ############ */
+
+#about{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+#about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translate(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: right;
+}
+
+/*==============type of Food styling ================== */
+#food{
+    padding: 5rem 0 10rem 0;
+}
+#food h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color:#555;
+}
+
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-container img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: coner;
+    object-position: center;
+}
+
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all 0.3s ease-in-out 0.1s;
+
+}
+.img-content h3{
+    color:#fff;
+    font-size: 3rem;
+}
+.img-content a{
+    font-size: 1.2rem;
+}
+/* overlay for type of food */
+.img-container::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.871);
+    opacity: 0;
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+
+}
+/* if i hoer on img then */
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaley(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+}
