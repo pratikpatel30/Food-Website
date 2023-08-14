@@ -41,6 +41,10 @@ body{
     color: #fff;
     background: #16a083;
 }
+.btn-primary:hover{
+    background: #0c3f35;
+    transition: background 0.3s ease-in-out;
+}
 
 /* ################# Navbar Styling ################ */
 
@@ -555,6 +559,16 @@ body{
         margin: 3rem auto;
     }
 }
+
+/* ############# Landscape Mode ####### */
+
+@media(orientation: landscape) and (max-height:500px){
+    .showcase-area{
+        height: 50vmax;
+    }
+}
+
+
 
 
 
