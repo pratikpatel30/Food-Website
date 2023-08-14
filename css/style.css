@@ -527,6 +527,34 @@ body{
     }
 }
 
+/* ############# Small Screen ############### */
+@media(max-width:500px){
+    html{
+        font-size: 50%;
+    }
+    .testmonial-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-menu-item{
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-menu-container img{
+        margin: auto;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-image{
+        width: 90%;
+        margin: 3rem auto;
+    }
+}
 
 
 
